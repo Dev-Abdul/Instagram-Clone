@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F2k-Rv-MwQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="LXD-pP-PpV" kind="relationship" relationship="viewControllers" id="YAy-oP-y3W"/>
@@ -150,8 +151,22 @@
                     <view key="view" contentMode="scaleToFill" id="cAp-sA-PXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkh-6U-jNb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hB5-oQ-LmA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ken-iw-GcV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ken-iw-GcV" firstAttribute="trailing" secondItem="gkh-6U-jNb" secondAttribute="trailing" id="3PY-Sd-u0Q"/>
+                            <constraint firstItem="gkh-6U-jNb" firstAttribute="leading" secondItem="ken-iw-GcV" secondAttribute="leading" id="Nky-N4-mJc"/>
+                            <constraint firstItem="gkh-6U-jNb" firstAttribute="top" secondItem="ken-iw-GcV" secondAttribute="top" id="VWZ-HP-Oee"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rjq-XJ-9ym"/>
                 </viewController>
@@ -195,7 +210,7 @@
         <scene sceneID="pzz-nw-8Il">
             <objects>
                 <navigationController id="too-Je-rL6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="camera" catalog="system" id="MQJ-r9-gSK"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="MQJ-r9-gSK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yTx-K4-lnj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -210,11 +225,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
